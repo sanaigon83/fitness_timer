@@ -1,4 +1,6 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+import 'home/home.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -10,6 +12,9 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(),
+      body: Home(),
+    );
   }
 }
