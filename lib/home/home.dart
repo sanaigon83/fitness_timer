@@ -17,7 +17,7 @@ class _HomeState extends State<Home> {
   int _runningTime = 40;
   int _refreshTime = 20;
   int _setCount = 5;
-  int _neonDuration = 10;
+  int _neonDuration = 0;
 
   final homeTextStyle = TextStyle(
       fontSize: 20, fontWeight: FontWeight.bold, color: Colors.grey.shade700);
@@ -149,7 +149,8 @@ class _HomeState extends State<Home> {
 
   // 운동 시작 버튼
   void _onPressRunningStart() {
-    countdownController.start();
+    //TODO: 운동시작을 알리는 별도의 페이지 추가
+    countdownController.restart(duration: _runningTime);
   }
 
   // 운동 중지 버튼
